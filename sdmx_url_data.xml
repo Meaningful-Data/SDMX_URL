@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message:StructureSpecificData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message"
+                               xmlns:ss="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific"
+                               xmlns:ns1="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=test:test(1.0):ObsLevelDim:AllDimensions"
+                               xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common"
+                               xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message https://registry.sdmx.org/schemas/v2_1/SDMXMessage.xsd">
+    <message:Header>
+        <message:ID>test</message:ID>
+        <message:Test>true</message:Test>
+        <message:Prepared>2021-03-08T17:05:06</message:Prepared>
+        <message:Sender id="Unknown"/>
+        <message:Receiver id="Not_supplied"/>
+        <message:Structure structureID="TEST_STRUCTURE"
+                           namespace="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=BIS:WEBSTATS_DER_DATAFLOW(1.0):ObsLevelDim:TIME_PERIOD"
+                           dimensionAtObservation="AllDimensions">
+            <common:StructureUsage>
+                <Ref agencyID="test" id="test" version="1.0"/>
+            </common:StructureUsage>
+        </message:Structure>
+        <message:DataSetID>DS_CP</message:DataSetID>
+        <message:Source xml:lang="en">SDMXthon</message:Source>
+    </message:Header>
+    <message:DataSet ss:structureRef="TEST_STRUCTURE"
+                     xsi:type="ns1:DataSetType"
+                     ss:dataScope="DataStructure" action="Information">
+        <Obs FREQ="M" NBB_COICOP="SERV00" INDEX_BASE="2015" INDEX_TYPE="HCP" DERIVATION="INDICES" REF_AREA="BE"
+             ADJUSTMENT="N" INSTITUTION="4F0" TIME_PERIOD="1991-01" OBS_VALUE="56.21" OBS_STATUS="A" CONF_STATUS="N"
+             UNIT_MEASURE="IX" UNIT_MULT="0" EMBARGO_TIME="" DECIMALS=""
+        />
+        <Obs FREQ="M" NBB_COICOP="SERV00" INDEX_BASE="2015" INDEX_TYPE="HCP" DERIVATION="INDICES" REF_AREA="BE"
+             ADJUSTMENT="N" INSTITUTION="4F0" TIME_PERIOD="1992-01" OBS_VALUE="65.99" OBS_STATUS="A" CONF_STATUS="N"
+             UNIT_MEASURE="IX" UNIT_MULT="0" EMBARGO_TIME="" DECIMALS=""
+        />
+
+    </message:DataSet>
+</message:StructureSpecificData>
