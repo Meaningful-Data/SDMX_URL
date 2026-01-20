@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message:StructureSpecificData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message"
+                               xmlns:ss="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific"
+                               xmlns:ns1="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=test:ds1(1.0):ObsLevelDim:AllDimensions"
+                               xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common"
+                               xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message https://registry.sdmx.org/schemas/v2_1/SDMXMessage.xsd">
+        <message:Header>
+        <message:ID>test</message:ID>
+        <message:Test>true</message:Test>
+        <message:Prepared>2021-03-08T17:05:06</message:Prepared>
+        <message:Sender id="Unknown"/>
+        <message:Receiver id="Not_supplied"/>
+        <message:Structure structureID="TEST_STRUCTURE"
+                           namespace="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=test:ds1(1.0):ObsLevelDim:AllDimensions"
+                           dimensionAtObservation="AllDimensions">
+            <common:StructureUsage>
+                <Ref agencyID="test" id="ds1" version="1.0"/>
+            </common:StructureUsage>
+        </message:Structure>
+        <message:DataSetID>ds1</message:DataSetID>
+        <message:Source xml:lang="en">SDMXthon</message:Source>
+    </message:Header>
+    <message:DataSet ss:structureRef="TEST_STRUCTURE"
+                     xsi:type="ns1:DataSetType"
+                     ss:dataScope="DataStructure" action="Information">
+        <Obs ID1="1" ID2="A" ME1="2"/>
+        <Obs ID1="1" ID2="B" ME1="3"/>
+        <Obs ID1="2" ID2="A" ME1="5"/>
+        <Obs ID1="2" ID2="B" ME1="6"/>
+    </message:DataSet>
+</message:StructureSpecificData>
